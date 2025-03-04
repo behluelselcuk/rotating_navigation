@@ -4,12 +4,13 @@
 
 body {
     font-family: 'Mulish', sans-serif;
+    background-color: #333;
+    color: #222;
     /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; */
-    height: 100vh;
-    /* overflow: hidden; */
+    overflow-x: hidden;
     margin: 0;
 }
 
@@ -20,6 +21,12 @@ main {
     width: 100vw;
     min-height: 100vh;
     padding: 50px;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+}
+
+main.show-nav {
+    transform: rotate(-20deg);
 }
 
 
@@ -37,10 +44,14 @@ main {
     height: 200px;
     border-radius: 50%;
     background-color: rgb(251, 96, 96);
+    transition: transform 0.5s linear;
+}
+
+.circle.show-nav {
+    transform: rotate(-90deg);
 }
 
 #open {
-    /* visibility: hidden; */
     position: absolute;
     right: 35px;
     bottom: 35px;
@@ -106,3 +117,7 @@ main {
 .content img {
     max-width: 100%;
 }
+
+
+
+/* === NAV === */
